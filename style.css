@@ -232,3 +232,123 @@ body{
 .product-card button:hover{
     background:#ff9800;
 }
+.newsletter{
+    text-align:center;
+    padding:60px 20px;
+    background:#222;
+    color:white;
+}
+
+.newsletter h2{
+    font-size:35px;
+    margin-bottom:15px;
+}
+
+.newsletter p{
+    font-size:18px;
+    margin-bottom:25px;
+    color:#ddd;
+}
+
+.newsletter-box{
+    display:flex;
+    justify-content:center;
+    gap:15px;
+    flex-wrap:wrap;
+}
+
+.newsletter-box input{
+    width:350px;
+    padding:14px;
+    border:none;
+    border-radius:5px;
+    outline:none;
+}
+
+.newsletter-box button{
+    padding:14px 25px;
+    background:#ff9800;
+    color:white;
+    border:none;
+    border-radius:5px;
+    cursor:pointer;
+    transition:.3s;
+}
+
+.newsletter-box button:hover{
+    background:#e62600;
+}
+
+.footer{
+    display:flex;
+    justify-content:space-between;
+    align-items:flex-start;
+    flex-wrap:wrap;
+    background:#222;
+    color:white;
+    padding:60px 8%;
+    gap:40px;
+}
+
+.footer-section,
+.quick-links,
+.contact,
+.follow{
+    flex:1;
+    min-width:220px;
+}
+
+.footer h2{
+    font-size:26px;
+    margin-bottom:15px;
+    color:#fff;
+}
+
+.footer p{
+    color:#d3d3d3;
+    line-height:1.8;
+    margin-bottom:15px;
+}
+
+
+.quick-links ul,
+.contact ul,
+.follow ul{
+    list-style:none;
+    padding:0;
+    margin:0;
+}
+
+.quick-links li,
+.contact li,
+.follow li{
+    margin:12px 0;
+}
+
+
+.quick-links a,
+.follow a{
+    text-decoration:none;
+    color:#d3d3d3;
+    transition:.3s;
+}
+
+.quick-links a:hover,
+.follow a:hover{
+    color:#ff9800;
+    padding-left:6px;
+}
+
+
+.contact li{
+    color:#d3d3d3;
+}
+
+.footer-bottom{
+    background:#111;
+    color:white;
+    text-align:center;
+    padding:18px;
+    font-size:15px;
+    border-top:1px solid #444;
+}
