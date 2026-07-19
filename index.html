@@ -5,15 +5,17 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>shopzone</title>
     <link rel="stylesheet" href="style.css">
-    <script src="script.js"></script>
 </head>
+<script src="script.js"></script>
 <body>
+    <div class = "cart">
+        <span id = "cart-count">0</span>
+    </div>
     <div class="dot-grid">
         <div class="dot-grid__wrap">
             <canvas class="dot-grid__canvas"></canvas>
         </div>
     </div>
-
     <div class="content">
     <div class = "nav-bar">
     <a href="All">All</a>
@@ -94,9 +96,9 @@
                  <p>⭐⭐⭐⭐☆ (4.5)</p>
                  <p> 20%OFF </p>
 
-                <button>Add to Cart</button>
-                <button>Buy Now</button>
-            </div>
+                <button class="add-btn" >Add to Cart</button>
+                <button class=" but-now">Buy Now</button>
+<button class="remove-btn">Remove</button>            </div>
 
             <div class="product-card">
                 <span class="wishlist">❤️</span>
@@ -105,10 +107,9 @@
                 <p>$129.99</p>
                 <p>⭐⭐⭐⭐☆ (4.5)</p>
                 <p> 15%OFF </p>
-
-                 <button>Add to Cart</button>
-                <button>Buy Now</button>
-            </div>
+                 <button class="add-btn">Add to Cart</button>
+                <button class="buy-now">Buy Now</button>
+<button class="remove-btn">Remove</button>            </div>
 
             <div class="product-card">
                 <span class="wishlist">❤️</span>
@@ -118,9 +119,9 @@
                  <p>⭐⭐⭐⭐☆ (4.5)</p>
                  <p> 10%OFF </p>
 
-                <button>Add to Cart</button>
-                <button>Buy Now</button>
-            </div>
+                <button class="add-cart">Add to Cart</button>
+                <button class="buy-now">Buy Now</button>
+   <button class="remove-btn">Remove</button>            </div>
             <div class="product-card">
             <span class="wishlist">❤️</span>
                 <img src="https://images.unsplash.com/photo-1523275335684-37898b6baf30?w=500" alt="Smart Watch">
@@ -129,9 +130,9 @@
                  <p>⭐⭐⭐⭐☆ (4.5)</p>
                     <p> 25%OFF </p>
 
-                    <button>Add to Cart</button>
-                    <button>Buy Now</button>
-            </div>
+                    <button class="add-cart">Add to Cart</button>
+                    <button class="buy-now">Buy Now</button>
+   <button class="remove-btn">Remove</button>            </div>
             <div class="product-card">
                 <span class="wishlist">❤️</span>
                 <img src="https://images.unsplash.com/photo-1553062407-98eeb64c6a62?w=500" alt="Backpack">
@@ -139,9 +140,9 @@
                 <p>$59.99</p>
                  <p>⭐⭐⭐⭐☆ (4.5)</p>
                     <p> 30%OFF </p>
-                      <button>Add to Cart</button>
-                <button>Buy Now</button>
-
+                      <button class="add-cart">Add to Cart</button>
+                <button class="buy-now">Buy Now</button>
+               <button class="remove-btn">Remove</button> 
             </div>
             <div class="product-card">
                 <span class="wishlist">❤️</span>
@@ -150,9 +151,9 @@
                 <p>$159.99</p>
                  <p>⭐⭐⭐⭐☆ (4.5)</p>
                     <p> 20%OFF </p>
-                      <button>Add to Cart</button>
-                <button>Buy Now</button>
-
+                      <button class="add-cart">Add to Cart</button>
+                <button class="buy-now">Buy Now</button>
+               <button class="remove-btn">Remove</button>
             </div>
             <div class="product-card">
                 <span class="wishlist">❤️</span>
@@ -161,8 +162,9 @@
                 <p>$599.99</p>
                  <p>⭐⭐⭐⭐☆ (4.5)</p>
                     <p> 15%OFF </p>
-                      <button>Add to Cart</button>
-                <button>Buy Now</button>
+                      <button class="add-cart">Add to Cart</button>
+                <button class="buy-now">Buy Now</button>
+                <button class="remove-cart">Remove from Cart</button>
                     </div>
                     <div class="product-card">
                 <span class="wishlist">❤️</span>
@@ -171,9 +173,9 @@
                 <p>$999.99</p>
                  <p>⭐⭐⭐⭐☆ (4.5)</p>
                     <p> 10%OFF </p>
-                      <button>Add to Cart</button>
-                <button>Buy Now</button>
-                    </div>
+                      <button class="add-cart">Add to Cart</button>
+                <button class="buy-now">Buy Now</button>
+               <button class="remove-btn">Remove</button>                    </div>
                     <div class="product-card">
                 <span class="wishlist">❤️</span>
                 <img src="https://images.unsplash.com/photo-1521572163474-6864f9cf17ab"
@@ -182,8 +184,9 @@
                 <p>$29.99</p>
                     <p>⭐⭐⭐⭐☆ (4.5)</p>
                     <p> 20%OFF </p>
-                      <button>Add to Cart</button>
-                <button>Buy Now</button>
+                      <button class="add-cart">Add to Cart</button>
+                <button class="buy-now">Buy Now</button>
+                <button class="remove-cart">Remove from Cart</button>
                     </div>
                     <div class="product-card">
                 <span class="wishlist">❤️</span>
@@ -192,9 +195,9 @@
                 <p>$49.99</p>
                     <p>⭐⭐⭐⭐☆ (4.5)</p>
                     <p> 15%OFF </p>
-                      <button>Add to Cart</button>
-                <button>Buy Now</button>
-                    </div>
+                      <button class="add-cart">Add to Cart</button>
+                <button class="buy-now">Buy Now</button>
+               <button class="remove-btn">Remove</button>                    </div>
                         <div class="product-card">
                 <span class="wishlist">❤️</span>
                 <img src="https://images.unsplash.com/photo-1556821840-3a63f95609a7"alt="Black Hoodie">
@@ -202,10 +205,9 @@
                 <p>$39.99</p>
                     <p>⭐⭐⭐⭐☆ (4.5)</p>
                     <p> 20%OFF </p>
-                      <button>Add to Cart</button>
-                <button>Buy Now</button>
-                
-                    </div>
+                      <button class="add-cart">Add to Cart</button>
+                <button class="buy-now">Buy Now</button>
+               <button class="remove-btn">Remove</button>                    </div>
 
                     <div class="product-card">
     <span class="wishlist">❤️</span>
@@ -214,9 +216,9 @@
     <p>$1299.99</p>
     <p>⭐⭐⭐⭐⭐ (4.9)</p>
     <p>20% OFF</p>
-    <button>Add to Cart</button>
-    <button>Buy Now</button>
-</div>
+    <button class="add-cart">Add to Cart</button>
+    <button class="buy-now">Buy Now</button>
+   <button class="remove-btn">Remove</button></div>
 
 <div class="product-card">
     <span class="wishlist">❤️</span>
@@ -225,9 +227,9 @@
     <p>$1499.99</p>
     <p>⭐⭐⭐⭐⭐ (4.8)</p>
     <p>15% OFF</p>
-    <button>Add to Cart</button>
-    <button>Buy Now</button>
-</div>
+    <button class="add-cart">Add to Cart</button>
+    <button class="buy-now">Buy Now</button>
+   <button class="remove-btn">Remove</button></div>
 
 <div class="product-card">
     <span class="wishlist">❤️</span>
@@ -236,9 +238,9 @@
     <p>$899.99</p>
     <p>⭐⭐⭐⭐☆ (4.6)</p>
     <p>18% OFF</p>
-    <button>Add to Cart</button>
-    <button>Buy Now</button>
-</div>
+    <button class="add-cart">Add to Cart</button>
+    <button class="buy-now">Buy Now</button>
+   <button class="remove-btn">Remove</button></div>
 
 <div class="product-card">
     <span class="wishlist">❤️</span>
@@ -247,9 +249,9 @@
     <p>$1899.99</p>
     <p>⭐⭐⭐⭐⭐ (4.9)</p>
     <p>10% OFF</p>
-    <button>Add to Cart</button>
-    <button>Buy Now</button>
-</div>
+    <button class="add-cart">Add to Cart</button>
+    <button class="buy-now">Buy Now</button>
+   <button class="remove-btn">Remove</button></div>
 
 <div class="product-card">
     <span class="wishlist">❤️</span>
@@ -258,9 +260,9 @@
     <p>$1199.99</p>
     <p>⭐⭐⭐⭐⭐ (4.9)</p>
     <p>12% OFF</p>
-    <button>Add to Cart</button>
-    <button>Buy Now</button>
-</div>
+    <button class="add-cart">Add to Cart</button>
+    <button class="buy-now">Buy Now</button>
+   <button class="remove-btn">Remove</button></div>
 
 <div class="product-card">
     <span class="wishlist">❤️</span>
@@ -269,9 +271,9 @@
     <p>$1299.99</p>
     <p>⭐⭐⭐⭐⭐ (4.8)</p>
     <p>14% OFF</p>
-    <button>Add to Cart</button>
-    <button>Buy Now</button>
-</div>
+    <button class="add-cart">Add to Cart</button>
+    <button class="buy-now">Buy Now</button>
+   <button class="remove-btn">Remove</button></div>
 
 <div class="product-card">
     <span class="wishlist">❤️</span>
@@ -280,9 +282,9 @@
     <p>$399.99</p>
     <p>⭐⭐⭐⭐⭐ (4.9)</p>
     <p>22% OFF</p>
-    <button>Add to Cart</button>
-    <button>Buy Now</button>
-</div>
+    <button class="add-cart">Add to Cart</button>
+    <button class="buy-now">Buy Now</button>
+   <button class="remove-btn">Remove</button></div>
 
 <div class="product-card">
     <span class="wishlist">❤️</span>
@@ -291,9 +293,9 @@
     <p>$699.99</p>
     <p>⭐⭐⭐⭐☆ (4.7)</p>
     <p>17% OFF</p>
-    <button>Add to Cart</button>
-    <button>Buy Now</button>
-</div>
+    <button class="add-cart">Add to Cart</button>
+    <button class="buy-now">Buy Now</button>
+   <button class="remove-btn">Remove</button></div>
     <div class="product-card">
     <span class="wishlist">❤️</span>
     <img src="https://images.unsplash.com/photo-1521572267360-ee0c2909d518?w=500" alt="Nike Sports T-Shirt">
@@ -301,9 +303,9 @@
     <p>$39.99</p>
     <p>⭐⭐⭐⭐⭐ (4.8)</p>
     <p>25% OFF</p>
-    <button>Add to Cart</button>
-    <button>Buy Now</button>
-</div>
+    <button class="add-cart">Add to Cart</button>
+    <button class="buy-now">Buy Now</button>
+   <button class="remove-btn">Remove</button></div>
 
 <div class="product-card">
     <span class="wishlist">❤️</span>
@@ -312,9 +314,9 @@
     <p>$89.99</p>
     <p>⭐⭐⭐⭐☆ (4.7)</p>
     <p>18% OFF</p>
-    <button>Add to Cart</button>
-    <button>Buy Now</button>
-</div>
+    <button class="add-cart">Add to Cart</button>
+    <button class="buy-now">Buy Now</button>
+   <button class="remove-btn">Remove</button></div>
 
 <div class="product-card">
     <span class="wishlist">❤️</span>
@@ -323,9 +325,9 @@
     <p>$49.99</p>
     <p>⭐⭐⭐⭐⭐ (4.9)</p>
     <p>20% OFF</p>
-    <button>Add to Cart</button>
-    <button>Buy Now</button>
-</div>
+    <button class="add-cart">Add to Cart</button>
+    <button class="buy-now">Buy Now</button>
+   <button class="remove-btn">Remove</button></div>
 
 <div class="product-card">
     <span class="wishlist">❤️</span>
@@ -334,9 +336,9 @@
     <p>$59.99</p>
     <p>⭐⭐⭐⭐☆ (4.6)</p>
     <p>15% OFF</p>
-    <button>Add to Cart</button>
-    <button>Buy Now</button>
-</div>
+    <button class="add-cart">Add to Cart</button>
+    <button class="buy-now">Buy Now</button>
+   <button class="remove-btn">Remove</button></div>
 
 <div class="product-card">
     <span class="wishlist">❤️</span>
@@ -345,9 +347,9 @@
     <p>$69.99</p>
     <p>⭐⭐⭐⭐⭐ (4.8)</p>
     <p>22% OFF</p>
-    <button>Add to Cart</button>
-    <button>Buy Now</button>
-</div>
+    <button class="add-cart">Add to Cart</button>
+    <button class="buy-now">Buy Now</button>
+   <button class="remove-btn">Remove</button></div>
 
 <div class="product-card">
     <span class="wishlist">❤️</span>
@@ -356,9 +358,9 @@
     <p>$44.99</p>
     <p>⭐⭐⭐⭐☆ (4.5)</p>
     <p>16% OFF</p>
-    <button>Add to Cart</button>
-    <button>Buy Now</button>
-</div>
+    <button class="add-cart">Add to Cart</button>
+    <button class="buy-now">Buy Now</button>
+   <button class="remove-btn">Remove</button></div>
 
 <div class="product-card">
     <span class="wishlist">❤️</span>
@@ -367,9 +369,9 @@
     <p>$34.99</p>
     <p>⭐⭐⭐⭐⭐ (4.8)</p>
     <p>30% OFF</p>
-    <button>Add to Cart</button>
-    <button>Buy Now</button>
-</div>
+    <button class="add-cart">Add to Cart</button>
+    <button class="buy-now">Buy Now</button>
+   <button class="remove-btn">Remove</button></div>
 
 <div class="product-card">
     <span class="wishlist">❤️</span>
@@ -378,9 +380,9 @@
     <p>$54.99</p>
     <p>⭐⭐⭐⭐☆ (4.7)</p>
     <p>18% OFF</p>
-    <button>Add to Cart</button>
-    <button>Buy Now</button>
-</div>
+    <button class="add-cart">Add to Cart</button>
+    <button class="buy-now">Buy Now</button>
+   <button class="remove-btn">Remove</button></div>
 
 <div class="product-card">
     <span class="wishlist">❤️</span>
@@ -389,9 +391,9 @@
     <p>$99.99</p>
     <p>⭐⭐⭐⭐⭐ (4.9)</p>
     <p>12% OFF</p>
-    <button>Add to Cart</button>
-    <button>Buy Now</button>
-</div>
+    <button class="add-cart">Add to Cart</button>
+    <button class="buy-now">Buy Now</button>
+   <button class="remove-btn">Remove</button></div>
 
 <div class="product-card">
     <span class="wishlist">❤️</span>
@@ -400,9 +402,9 @@
     <p>$79.99</p>
     <p>⭐⭐⭐⭐⭐ (4.8)</p>
     <p>20% OFF</p>
-    <button>Add to Cart</button>
-    <button>Buy Now</button>
-</div>
+    <button class="add-cart">Add to Cart</button>
+    <button class="buy-now">Buy Now</button>
+   <button class="remove-btn">Remove</button></div>
     <div class="product-card">
     <span class="wishlist">❤️</span>
     <img src="https://images.unsplash.com/photo-1542291026-7eec264c27ff?w=500" alt="Nike Air Max 270">
@@ -410,9 +412,9 @@
     <p>$189.99</p>
     <p>⭐⭐⭐⭐⭐ (4.9)</p>
     <p>20% OFF</p>
-    <button>Add to Cart</button>
-    <button>Buy Now</button>
-</div>
+    <button class="add-cart">Add to Cart</button>
+    <button class="buy-now">Buy Now</button>
+   <button class="remove-btn">Remove</button></div>
 
 <div class="product-card">
     <span class="wishlist">❤️</span>
@@ -421,9 +423,9 @@
     <p>$179.99</p>
     <p>⭐⭐⭐⭐⭐ (4.8)</p>
     <p>18% OFF</p>
-    <button>Add to Cart</button>
-    <button>Buy Now</button>
-</div>
+    <button class="add-cart">Add to Cart</button>
+    <button class="buy-now">Buy Now</button>
+   <button class="remove-btn">Remove</button></div>
 
 <div class="product-card">
     <span class="wishlist">❤️</span>
@@ -432,9 +434,9 @@
     <p>$149.99</p>
     <p>⭐⭐⭐⭐☆ (4.7)</p>
     <p>15% OFF</p>
-    <button>Add to Cart</button>
-    <button>Buy Now</button>
-</div>
+    <button class="add-cart">Add to Cart</button>
+    <button class="buy-now">Buy Now</button>
+   <button class="remove-btn">Remove</button></div>
 
 <div class="product-card">
     <span class="wishlist">❤️</span>
@@ -443,9 +445,9 @@
     <p>$74.99</p>
     <p>⭐⭐⭐⭐⭐ (4.8)</p>
     <p>25% OFF</p>
-    <button>Add to Cart</button>
-    <button>Buy Now</button>
-</div>
+    <button class="add-cart">Add to Cart</button>
+    <button class="buy-now">Buy Now</button>
+   <button class="remove-btn">Remove</button></div>
 
 <div class="product-card">
     <span class="wishlist">❤️</span>
@@ -454,9 +456,9 @@
     <p>$79.99</p>
     <p>⭐⭐⭐⭐☆ (4.6)</p>
     <p>22% OFF</p>
-    <button>Add to Cart</button>
-    <button>Buy Now</button>
-</div>
+    <button class="add-cart">Add to Cart</button>
+    <button class="buy-now">Buy Now</button>
+   <button class="remove-btn">Remove</button></div>
 
 <div class="product-card">
     <span class="wishlist">❤️</span>
@@ -465,9 +467,9 @@
     <p>$199.99</p>
     <p>⭐⭐⭐⭐⭐ (4.9)</p>
     <p>12% OFF</p>
-    <button>Add to Cart</button>
-    <button>Buy Now</button>
-</div>
+    <button class="add-cart">Add to Cart</button>
+    <button class="buy-now">Buy Now</button>
+   <button class="remove-btn">Remove</button></div>
 
 <div class="product-card">
     <span class="wishlist">❤️</span>
@@ -476,9 +478,9 @@
     <p>$169.99</p>
     <p>⭐⭐⭐⭐⭐ (4.8)</p>
     <p>16% OFF</p>
-    <button>Add to Cart</button>
-    <button>Buy Now</button>
-</div>
+    <button class="add-cart">Add to Cart</button>
+    <button class="buy-now">Buy Now</button>
+   <button class="remove-btn">Remove</button></div>
 
 <div class="product-card">
     <span class="wishlist">❤️</span>
@@ -487,9 +489,9 @@
     <p>$99.99</p>
     <p>⭐⭐⭐⭐☆ (4.5)</p>
     <p>20% OFF</p>
-    <button>Add to Cart</button>
-    <button>Buy Now</button>
-</div>
+    <button class="add-cart">Add to Cart</button>
+    <button class="buy-now">Buy Now</button>
+   <button class="remove-btn">Remove</button></div>
 
 <div class="product-card">
     <span class="wishlist">❤️</span>
@@ -498,9 +500,9 @@
     <p>$159.99</p>
     <p>⭐⭐⭐⭐⭐ (4.8)</p>
     <p>18% OFF</p>
-    <button>Add to Cart</button>
-    <button>Buy Now</button>
-</div>
+    <button class="add-cart">Add to Cart</button>
+    <button class="buy-now">Buy Now</button>
+   <button class="remove-btn">Remove</button></div>
 
 <div class="product-card">
     <span class="wishlist">❤️</span>
@@ -509,9 +511,9 @@
     <p>$89.99</p>
     <p>⭐⭐⭐⭐☆ (4.6)</p>
     <p>24% OFF</p>
-    <button>Add to Cart</button>
-    <button>Buy Now</button>
-</div>
+    <button class="add-cart">Add to Cart</button>
+    <button class="buy-now">Buy Now</button>
+   <button class="remove-btn">Remove</button></div>
     <div class="product-card">
     <span class="wishlist">❤️</span>
     <img src="https://images.unsplash.com/photo-1617043786394-f977fa12eddf?auto=format&fit=crop&w=500&q=80" alt="Apple Watch Ultra 2">
@@ -519,9 +521,9 @@
     <p>$599.99</p>
     <p>⭐⭐⭐⭐⭐ (4.9)</p>
     <p>15% OFF</p>
-    <button>Add to Cart</button>
-    <button>Buy Now</button>
-</div>
+    <button class="add-cart">Add to Cart</button>
+    <button class="buy-now">Buy Now</button>
+   <button class="remove-btn">Remove</button></div>
 <div class="product-card">
     <span class="wishlist">❤️</span>
     <img src="https://images.unsplash.com/photo-1551232864-3f0890e580d9?auto=format&fit=crop&w=500&q=80" alt="Leather Jacket">
@@ -529,9 +531,9 @@
     <p>$129.99</p>
     <p>⭐⭐⭐⭐⭐ (4.9)</p>
     <p>25% OFF</p>
-    <button>Add to Cart</button>
-    <button>Buy Now</button>
-</div>
+    <button class="add-cart">Add to Cart</button>
+    <button class="buy-now">Buy Now</button>
+   <button class="remove-btn">Remove</button></div>
 
 <div class="product-card">
     <span class="wishlist">❤️</span>
@@ -540,9 +542,9 @@
     <p>$69.99</p>
     <p>⭐⭐⭐⭐☆ (4.7)</p>
     <p>18% OFF</p>
-    <button>Add to Cart</button>
-    <button>Buy Now</button>
-</div>
+    <button class="add-cart">Add to Cart</button>
+    <button class="buy-now">Buy Now</button>
+   <button class="remove-btn">Remove</button></div>
 
 <div class="product-card">
     <span class="wishlist">❤️</span>
@@ -551,9 +553,9 @@
     <p>$49.99</p>
     <p>⭐⭐⭐⭐⭐ (4.8)</p>
     <p>20% OFF</p>
-    <button>Add to Cart</button>
-    <button>Buy Now</button>
-</div>
+    <button class="add-cart">Add to Cart</button>
+    <button class="buy-now">Buy Now</button>
+   <button class="remove-btn">Remove</button></div>
 
 <div class="product-card">
     <span class="wishlist">❤️</span>
@@ -562,9 +564,9 @@
     <p>$99.99</p>
     <p>⭐⭐⭐⭐⭐ (4.8)</p>
     <p>15% OFF</p>
-    <button>Add to Cart</button>
-    <button>Buy Now</button>
-</div>
+    <button class="add-cart">Add to Cart</button>
+    <button class="buy-now">Buy Now</button>
+   <button class="remove-btn">Remove</button></div>
 
 <div class="product-card">
     <span class="wishlist">❤️</span>
@@ -573,9 +575,9 @@
     <p>$59.99</p>
     <p>⭐⭐⭐⭐☆ (4.6)</p>
     <p>18% OFF</p>
-    <button>Add to Cart</button>
-    <button>Buy Now</button>
-</div>
+    <button class="add-cart">Add to Cart</button>
+    <button class="buy-now">Buy Now</button>
+   <button class="remove-btn">Remove</button></div>
 
 <div class="product-card">
     <span class="wishlist">❤️</span>
@@ -584,9 +586,9 @@
     <p>$54.99</p>
     <p>⭐⭐⭐⭐⭐ (4.8)</p>
     <p>20% OFF</p>
-    <button>Add to Cart</button>
-    <button>Buy Now</button>
-</div>
+    <button class="add-cart">Add to Cart</button>
+    <button class="buy-now">Buy Now</button>
+   <button class="remove-btn">Remove</button></div>
 
 <div class="product-card">
     <span class="wishlist">❤️</span>
@@ -595,9 +597,9 @@
     <p>$79.99</p>
     <p>⭐⭐⭐⭐⭐ (4.9)</p>
     <p>22% OFF</p>
-    <button>Add to Cart</button>
-    <button>Buy Now</button>
-</div>
+    <button class="add-cart">Add to Cart</button>
+    <button class="buy-now">Buy Now</button>
+   <button class="remove-btn">Remove</button></div>
 
 <div class="product-card">
     <span class="wishlist">❤️</span>
@@ -606,9 +608,9 @@
     <p>$44.99</p>
     <p>⭐⭐⭐⭐☆ (4.7)</p>
     <p>25% OFF</p>
-    <button>Add to Cart</button>
-    <button>Buy Now</button>
-</div>
+    <button class="add-cart">Add to Cart</button>
+    <button class="buy-now">Buy Now</button>
+   <button class="remove-btn">Remove</button></div>
 
 <div class="product-card">
     <span class="wishlist">❤️</span>
@@ -617,8 +619,9 @@
     <p>$29.99</p>
     <p>⭐⭐⭐⭐⭐ (4.8)</p>
     <p>30% OFF</p>
-    <button>Add to Cart</button>
-    <button>Buy Now</button>
+    <button class="add-cart">Add to Cart</button>
+    <button class="buy-now">Buy Now</button>
+   <button class="remove-btn">Remove</button></div>
 </div>
 
 <div class="product-card">
@@ -628,8 +631,8 @@
     <p>$89.99</p>
     <p>⭐⭐⭐⭐⭐ (4.9)</p>
     <p>20% OFF</p>
-    <button>Add to Cart</button>
-    <button>Buy Now</button>
+    <button class="add-cart">Add to Cart</button>
+    <button class="buy-now">Buy Now</button>
 </div>
 
 <div class="product-card">
@@ -639,8 +642,8 @@
     <p>$649.99</p>
     <p>⭐⭐⭐⭐⭐ (4.8)</p>
     <p>20% OFF</p>
-    <button>Add to Cart</button>
-    <button>Buy Now</button>
+    <button class="add-cart">Add to Cart</button>
+    <button class="buy-now">Buy Now</button>
 </div>
 
 <div class="product-card">
@@ -650,8 +653,8 @@
     <p>$279.99</p>
     <p>⭐⭐⭐⭐☆ (4.7)</p>
     <p>18% OFF</p>
-    <button>Add to Cart</button>
-    <button>Buy Now</button>
+    <button class="add-cart">Add to Cart</button>
+    <button class="buy-now">Buy Now</button>
 </div>
 
 <div class="product-card">
@@ -661,8 +664,8 @@
     <p>$119.99</p>
     <p>⭐⭐⭐⭐⭐ (4.8)</p>
     <p>25% OFF</p>
-    <button>Add to Cart</button>
-    <button>Buy Now</button>
+    <button class="add-cart">Add to Cart</button>
+    <button class="buy-now">Buy Now</button>
 </div>
 
 <div class="product-card">
@@ -672,9 +675,9 @@
     <p>$9999.99</p>
     <p>⭐⭐⭐⭐⭐ (5.0)</p>
     <p>5% OFF</p>
-    <button>Add to Cart</button>
-    <button>Buy Now</button>
-</div>
+    <button class="add-cart">Add to Cart</button>
+    <button class="buy-now">Buy Now</button>
+   <button class="remove-btn">Remove</button></div>
 
 <div class="product-card">
     <span class="wishlist">❤️</span>
@@ -683,9 +686,9 @@
     <p>$425.99</p>
     <p>⭐⭐⭐⭐⭐ (4.9)</p>
     <p>12% OFF</p>
-    <button>Add to Cart</button>
-    <button>Buy Now</button>
-</div>
+    <button class="add-cart">Add to Cart</button>
+    <button class="buy-now">Buy Now</button>
+   <button class="remove-btn">Remove</button></div>
 
 <div class="product-card">
     <span class="wishlist">❤️</span>
@@ -694,9 +697,9 @@
     <p>$149.99</p>
     <p>⭐⭐⭐⭐☆ (4.6)</p>
     <p>20% OFF</p>
-    <button>Add to Cart</button>
-    <button>Buy Now</button>
-</div>
+    <button class="add-cart">Add to Cart</button>
+    <button class="buy-now">Buy Now</button>
+   <button class="remove-btn">Remove</button></div>
 
 <div class="product-card">
     <span class="wishlist">❤️</span>
@@ -705,9 +708,9 @@
     <p>$299.99</p>
     <p>⭐⭐⭐⭐⭐ (4.8)</p>
     <p>16% OFF</p>
-    <button>Add to Cart</button>
-    <button>Buy Now</button>
-</div>
+    <button class="add-cart">Add to Cart</button>
+    <button class="buy-now">Buy Now</button>
+   <button class="remove-btn">Remove</button></div>
 
 <div class="product-card">
     <span class="wishlist">❤️</span>
@@ -716,9 +719,9 @@
     <p>$249.99</p>
     <p>⭐⭐⭐⭐☆ (4.7)</p>
     <p>22% OFF</p>
-    <button>Add to Cart</button>
-    <button>Buy Now</button>
-</div>
+    <button class="add-cart">Add to Cart</button>
+    <button class="buy-now">Buy Now</button>
+   <button class="remove-btn">Remove</button></div>
 
 <div class="product-card">
     <span class="wishlist">❤️</span>
@@ -727,9 +730,9 @@
     <p>$449.99</p>
     <p>⭐⭐⭐⭐⭐ (4.9)</p>
     <p>14% OFF</p>
-    <button>Add to Cart</button>
-    <button>Buy Now</button>
-</div>
+    <button class="add-cart">Add to Cart</button>
+    <button class="buy-now">Buy Now</button>
+   <button class="remove-btn">Remove</button></div>
 <div class="product-card">
     <span class="wishlist">❤️</span>
     <img src="https://images.unsplash.com/photo-1434493789847-2f02dc6ca35d?auto=format&fit=crop&w=500&q=80" alt="Apple Watch SE">
@@ -737,9 +740,9 @@
     <p>$249.99</p>
     <p>⭐⭐⭐⭐☆ (4.7)</p>
     <p>18% OFF</p>
-    <button>Add to Cart</button>
-    <button>Buy Now</button>
-</div>
+    <button class="add-cart">Add to Cart</button>
+    <button class="buy-now">Buy Now</button>
+   <button class="remove-btn">Remove</button></div>
         </div>
     </section>
     </div>
