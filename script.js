@@ -23,3 +23,24 @@ buyNowButtons.forEach(button => {
         alert("Proceeding to Checkout...");
     });
 });
+const wishlistButtons = document.querySelectorAll(".wishlist");
+
+wishlistButtons.forEach((heart) => {
+    heart.addEventListener("click", () => {
+        if (heart.innerHTML === "❤️") {
+            heart.innerHTML = "🤍";
+        } else {
+            heart.innerHTML = "❤️";
+        }
+    });
+});
+const searchInput = document.querySelector(".search-box input");
+const productCards = document.querySelectorAll(".product-card");
+
+searchInput.addEventListener("keyup", () => {
+
+});
+const categoryButtons = document.querySelectorAll(".nav-bar a");
+let totalPrice = 0;
+localStorage.setItem();
+localStorage.getItem();
