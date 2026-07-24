@@ -10,3 +10,16 @@ const buyNowButtons = document.querySelectorAll('.buy-now');
     addCartCount.textContent = count;
 });
  });
+ removebtnButtons.forEach(button => {
+    button.addEventListener('click', () => {
+        if (count > 0) {
+            count--;
+            addCartCount.textContent = count;
+        }
+    });
+});
+buyNowButtons.forEach(button => {
+    button.addEventListener('click', () => {
+        alert("Proceeding to Checkout...");
+    });
+});
