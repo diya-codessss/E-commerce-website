@@ -44,3 +44,19 @@ const categoryButtons = document.querySelectorAll(".nav-bar a");
 let totalPrice = 0;
 localStorage.setItem();
 localStorage.getItem();
+
+searchInput.addEventListener("keyup", () => {
+
+    const searchValue = searchInput.value.toLowerCase();
+
+    console.log(searchValue);
+
+});
+
+productCards.forEach((card) => {
+
+    const productName = card.querySelector("h3").textContent.toLowerCase();
+
+    console.log(productName);
+
+});
