@@ -1,5 +1,5 @@
 const addcartButtons = document.querySelectorAll('.add-btn');
-const removebtnButtons = document.querySelectorAll('.remove-from-cart');
+const removebtnButtons = document.querySelectorAll('.remove-btn');
 const buyNowButtons = document.querySelectorAll('.buy-now');
 
  const addCartCount = document.querySelector('#cart-count');
@@ -42,6 +42,9 @@ searchInput.addEventListener("keyup", () => {
 });
 const categoryButtons = document.querySelectorAll(".nav-bar a");
 let totalPrice = 0;
+let cart = [];
+
+const cartList = document.querySelector("#cart-list");
 
 searchInput.addEventListener("keyup", () => {
 
@@ -58,4 +61,47 @@ if(productName.includes(searchValue)) {
 }
 
 });
+});
+const totalPriceElement = document.getElementById("total-price");
+addcartButtons.forEach(button => {
+    button.addEventListener('click', () => {
+
+        const productCard = button.closest('.product-card');
+        const priceElement = productCard.querySelector('p');
+        const priceText = priceElement.textContent;
+
+        const price = parseFloat(priceText.replace('$', ''));
+        totalPrice += price;
+        totalPriceElement.textContent = totalPrice.toFixed(2);
+        const productName = productCard.querySelector("h3").textContent;
+
+cart.push({
+    name: productName,
+    price: price
+});
+const li = document.createElement("li");
+
+li.textContent = `${productName} - $${price}`;
+
+cartList.appendChild(li);
+ button.textContent = "Added ✅";
+        button.disabled = true;
+        button.style.backgroundColor = "green";
+    });
+});
+const removebtnButtons = document.querySelectorAll('.remove-btn');
+removebtnButtons.forEach(button => {
+    button.addEventListener('click', () => {
+        const productCard = button.closest('.product-card');
+        const priceElement = productCard.querySelector('p');
+        const priceText = priceElement.textContent; 
+        if (totalPrice < 0){
+            totalPrice = 0;
+        }
+        totalPriceElement.textContent = totalPrice.toFixed(2);
+        if (count > 0) {
+            count--;
+            addCartCount.textContent = count;
+        }
+    });
 });
