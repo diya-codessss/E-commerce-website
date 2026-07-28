@@ -89,19 +89,61 @@ cartList.appendChild(li);
         button.style.backgroundColor = "green";
     });
 });
-const removebtnButtons = document.querySelectorAll('.remove-btn');
+const removebtnButtons = document.querySelectorAll(".remove-btn");
+
 removebtnButtons.forEach(button => {
-    button.addEventListener('click', () => {
-        const productCard = button.closest('.product-card');
-        const priceElement = productCard.querySelector('p');
-        const priceText = priceElement.textContent; 
-        if (totalPrice < 0){
+    button.addEventListener("click", () => {
+
+        const productCard = button.closest(".product-card");
+
+        const priceElement = productCard.querySelector("p");
+        const priceText = priceElement.textContent;
+
+        const price = parseFloat(priceText.replace("$", ""));
+
+        totalPrice -= price;
+
+        if (totalPrice < 0) {
             totalPrice = 0;
         }
+
         totalPriceElement.textContent = totalPrice.toFixed(2);
+
         if (count > 0) {
             count--;
             addCartCount.textContent = count;
         }
+
+        // Add to Cart button reset
+        const addButton = productCard.querySelector(".add-btn");
+
+        if (addButton) {
+            addButton.textContent = "Add to Cart";
+            addButton.disabled = false;
+            addButton.style.backgroundColor = "";
+        }
+
     });
 });
+function searchProducts() {
+
+    const searchValue = searchInput.value.toLowerCase();
+
+    productCards.forEach((card) => {
+
+        const productName = card.querySelector("h3").textContent.toLowerCase();
+
+        if (productName.includes(searchValue)) {
+            card.style.display = "";
+        } else {
+            card.style.display = "none";
+        }
+
+    });
+
+}
+const searchButton = document.querySelector(".search-box button");
+
+searchInput.addEventListener("keyup", searchProducts);
+
+searchButton.addEventListener("click", searchProducts);
