@@ -147,3 +147,10 @@ const searchButton = document.querySelector(".search-box button");
 searchInput.addEventListener("keyup", searchProducts);
 
 searchButton.addEventListener("click", searchProducts);
+searchInput.addEventListener("keydown", (event) => {
+
+    if (event.key === "Enter") {
+        searchProducts();
+    }
+
+});
