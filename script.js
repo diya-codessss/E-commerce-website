@@ -36,10 +36,6 @@ wishlistButtons.forEach((heart) => {
 });
 const searchInput = document.querySelector(".search-box input");
 const productCards = document.querySelectorAll(".product-card");
-
-searchInput.addEventListener("keyup", () => {
-
-});
 const categoryButtons = document.querySelectorAll(".nav-bar a");
 let totalPrice = 0;
 let cart = [];
@@ -89,8 +85,6 @@ cartList.appendChild(li);
         button.style.backgroundColor = "green";
     });
 });
-const removebtnButtons = document.querySelectorAll(".remove-btn");
-
 removebtnButtons.forEach(button => {
     button.addEventListener("click", () => {
 
@@ -154,3 +148,13 @@ searchInput.addEventListener("keydown", (event) => {
     }
 
 });
+const productName = productCard.querySelector("h3").textContent;
+cart = cart.filter(product => product.name !== productName);
+const items = cartList.querySelectorAll("li");
+items.forEach((li) => {
+    if (li.textContent.includes(productName)) {
+        li.remove();
+    }
+}); 
+  
+
