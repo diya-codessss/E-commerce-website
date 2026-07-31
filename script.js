@@ -1,29 +1,26 @@
-const addcartButtons = document.querySelectorAll('.add-btn');
-const removebtnButtons = document.querySelectorAll('.remove-btn');
-const buyNowButtons = document.querySelectorAll('.buy-now');
+const addcartButtons = document.querySelectorAll(".add-btn");
+const removebtnButtons = document.querySelectorAll(".remove-btn");
+const buyNowButtons = document.querySelectorAll(".buy-now");
 
- const addCartCount = document.querySelector('#cart-count');
- let count = 0;
- addcartButtons.forEach(button => {
- button.addEventListener('click', () => {
-    count++;
-    addCartCount.textContent = count;
-});
- });
- removebtnButtons.forEach(button => {
-    button.addEventListener('click', () => {
-        if (count > 0) {
-            count--;
-            addCartCount.textContent = count;
-        }
-    });
-});
+const addCartCount = document.querySelector("#cart-count");
+const totalPriceElement = document.getElementById("total-price");
+const cartList = document.querySelector("#cart-list");
+
+const wishlistButtons = document.querySelectorAll(".wishlist");
+const searchInput = document.querySelector(".search-box input");
+const searchButton = document.querySelector(".search-box button");
+const productCards = document.querySelectorAll(".product-card");
+const categoryButtons = document.querySelectorAll(".nav-bar a");
+
+let count = 0;
+let totalPrice = 0;
+let cart = [];
+
 buyNowButtons.forEach(button => {
-    button.addEventListener('click', () => {
+    button.addEventListener("click", () => {
         alert("Proceeding to Checkout...");
     });
 });
-const wishlistButtons = document.querySelectorAll(".wishlist");
 
 wishlistButtons.forEach((heart) => {
     heart.addEventListener("click", () => {
@@ -34,66 +31,73 @@ wishlistButtons.forEach((heart) => {
         }
     });
 });
-const searchInput = document.querySelector(".search-box input");
-const productCards = document.querySelectorAll(".product-card");
-const categoryButtons = document.querySelectorAll(".nav-bar a");
-let totalPrice = 0;
-let cart = [];
 
-const cartList = document.querySelector("#cart-list");
-
-searchInput.addEventListener("keyup", () => {
-
-    const searchValue = searchInput.value.toLowerCase();
-
-
-productCards.forEach((card) => {
-
-    const productName = card.querySelector("h3").textContent.toLowerCase();
-if(productName.includes(searchValue)) {
-    card.style.display = "";
-} else {
-    card.style.display = "none";
-}
-
-});
-});
-const totalPriceElement = document.getElementById("total-price");
 addcartButtons.forEach(button => {
-    button.addEventListener('click', () => {
 
-        const productCard = button.closest('.product-card');
-        const priceElement = productCard.querySelector('p');
-        const priceText = priceElement.textContent;
-
-        const price = parseFloat(priceText.replace('$', ''));
-        totalPrice += price;
-        totalPriceElement.textContent = totalPrice.toFixed(2);
-        const productName = productCard.querySelector("h3").textContent;
-
-cart.push({
-    name: productName,
-    price: price
-});
-const li = document.createElement("li");
-
-li.textContent = `${productName} - $${price}`;
-
-cartList.appendChild(li);
- button.textContent = "Added ✅";
-        button.disabled = true;
-        button.style.backgroundColor = "green";
-    });
-});
-removebtnButtons.forEach(button => {
     button.addEventListener("click", () => {
 
         const productCard = button.closest(".product-card");
 
-        const priceElement = productCard.querySelector("p");
-        const priceText = priceElement.textContent;
+        const productName =
+            productCard.querySelector("h3").textContent;
 
-        const price = parseFloat(priceText.replace("$", ""));
+        const priceText =
+            productCard.querySelector("p").textContent;
+
+        const price =
+            parseFloat(priceText.replace("$", ""));
+
+        count++;
+        addCartCount.textContent = count;
+
+        totalPrice += price;
+        totalPriceElement.textContent =
+            totalPrice.toFixed(2);
+
+        cart.push({
+            name: productName,
+            price: price
+        });
+
+        const li = document.createElement("li");
+
+        li.textContent = `${productName} - $${price}`;
+
+        li.dataset.name = productName;
+
+        cartList.appendChild(li);
+
+        button.textContent = "Added ✅";
+        button.disabled = true;
+        button.style.backgroundColor = "green";
+
+    });
+
+});
+removebtnButtons.forEach(button => {
+
+    button.addEventListener("click", () => {
+
+        const productCard = button.closest(".product-card");
+
+        const productName =
+            productCard.querySelector("h3").textContent;
+
+        const priceText =
+            productCard.querySelector("p").textContent;
+
+        const price =
+            parseFloat(priceText.replace("$", ""));
+
+        cart = cart.filter(product => product.name !== productName);
+
+        const itemToRemove = cartList.querySelector(
+            `[data-name="${productName}"]`
+        );
+
+        if (itemToRemove) {
+            itemToRemove.remove();
+        }
 
         totalPrice -= price;
 
@@ -103,58 +107,79 @@ removebtnButtons.forEach(button => {
 
         totalPriceElement.textContent = totalPrice.toFixed(2);
 
+
         if (count > 0) {
             count--;
-            addCartCount.textContent = count;
         }
 
-        // Add to Cart button reset
+        addCartCount.textContent = count;
         const addButton = productCard.querySelector(".add-btn");
 
-        if (addButton) {
-            addButton.textContent = "Add to Cart";
-            addButton.disabled = false;
-            addButton.style.backgroundColor = "";
-        }
+        addButton.textContent = "Add to Cart";
+        addButton.disabled = false;
+        addButton.style.backgroundColor = "";
 
     });
+
 });
+
+
+
 function searchProducts() {
 
     const searchValue = searchInput.value.toLowerCase();
 
-    productCards.forEach((card) => {
+    productCards.forEach(card => {
 
-        const productName = card.querySelector("h3").textContent.toLowerCase();
+        const productName =
+            card.querySelector("h3").textContent.toLowerCase();
 
         if (productName.includes(searchValue)) {
+
             card.style.display = "";
+
         } else {
+
             card.style.display = "none";
+
         }
 
     });
 
 }
-const searchButton = document.querySelector(".search-box button");
 
 searchInput.addEventListener("keyup", searchProducts);
 
 searchButton.addEventListener("click", searchProducts);
+
 searchInput.addEventListener("keydown", (event) => {
 
     if (event.key === "Enter") {
+
         searchProducts();
+
     }
 
 });
-const productName = productCard.querySelector("h3").textContent;
-cart = cart.filter(product => product.name !== productName);
-const items = cartList.querySelectorAll("li");
-items.forEach((li) => {
-    if (li.textContent.includes(productName)) {
-        li.remove();
-    }
-}); 
-  
-
+console.log(categoryButtons.length);
+categoryButtons.forEach(button => {
+    button.addEventListener("click", (e) => {
+        e.preventDefault();
+        console.log(button);
+console.log(button.outerHTML);
+        const category = button.getAttribute("data-category")
+        productCards.forEach(card => {
+            const productcategory = card.getAttribute("data-category")
+            console.log(category);
+            if(category === "all"){
+               card.style.display = ""; 
+            }
+            else if(productcategory === category){
+                card.style.display ="";
+            }
+            else{
+                card.style.display = "none";
+            }
+        })
+    })
+});
