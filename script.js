@@ -182,4 +182,27 @@ console.log(button.outerHTML);
             }
         })
     })
+    categoryButtons.forEach(btn => {
+    btn.classList.remove("active");
+});
+
+button.classList.add("active");
+
+const category = button.getAttribute("data-category");
+
+productCards.forEach(card => {
+
+    const productCategory = card.getAttribute("data-category");
+
+    if (category === "all") {
+        card.style.display = "";
+    }
+    else if (productCategory === category) {
+        card.style.display = "";
+    }
+    else {
+        card.style.display = "none";
+    }
+
+});
 });
