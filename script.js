@@ -162,47 +162,39 @@ searchInput.addEventListener("keydown", (event) => {
 
 });
 console.log(categoryButtons.length);
+
 categoryButtons.forEach(button => {
+
     button.addEventListener("click", (e) => {
+
         e.preventDefault();
-        console.log(button);
-console.log(button.outerHTML);
-        const category = button.getAttribute("data-category")
+
+        // Sab buttons se active hatao
+        categoryButtons.forEach(btn => {
+            btn.classList.remove("active");
+        });
+
+        // Jis button par click hua usko active banao
+        button.classList.add("active");
+
+        const category = button.getAttribute("data-category");
+
         productCards.forEach(card => {
-            const productcategory = card.getAttribute("data-category")
-            console.log(category);
-            if(category === "all"){
-               card.style.display = ""; 
+
+            const productCategory = card.getAttribute("data-category");
+
+            if (category === "all") {
+                card.style.display = "";
             }
-            else if(productcategory === category){
-                card.style.display ="";
+            else if (productCategory === category) {
+                card.style.display = "";
             }
-            else{
+            else {
                 card.style.display = "none";
             }
-        })
-    })
-    categoryButtons.forEach(btn => {
-    btn.classList.remove("active");
-});
 
-button.classList.add("active");
+        });
 
-const category = button.getAttribute("data-category");
+    });
 
-productCards.forEach(card => {
-
-    const productCategory = card.getAttribute("data-category");
-
-    if (category === "all") {
-        card.style.display = "";
-    }
-    else if (productCategory === category) {
-        card.style.display = "";
-    }
-    else {
-        card.style.display = "none";
-    }
-
-});
 });
