@@ -1,3 +1,8 @@
+const wishlistCount = document.querySelector("#wishlist-count");
+let wishlist = JSON.parse(localStorage.getItem("wishlist")) || [];
+
+wishlistCount.textContent = wishlist.length;
+
 const addcartButtons = document.querySelectorAll(".add-btn");
 const removebtnButtons = document.querySelectorAll(".remove-btn");
 const buyNowButtons = document.querySelectorAll(".buy-now");
@@ -5,7 +10,6 @@ const buyNowButtons = document.querySelectorAll(".buy-now");
 const addCartCount = document.querySelector("#cart-count");
 const totalPriceElement = document.getElementById("total-price");
 const cartList = document.querySelector("#cart-list");
-
 const wishlistButtons = document.querySelectorAll(".wishlist");
 const searchInput = document.querySelector(".search-box input");
 const searchButton = document.querySelector(".search-box button");
@@ -22,14 +26,48 @@ buyNowButtons.forEach(button => {
     });
 });
 
+wishlistButtons.forEach(heart => {
+
+    const productName = heart.closest(".product-card")
+        .querySelector("h3").textContent;
+
+    if (wishlist.includes(productName)) {
+
+        heart.innerHTML = "❤️";
+
+    } else {
+
+        heart.innerHTML = "🤍";
+
+    }
+
+});
+
 wishlistButtons.forEach((heart) => {
+
     heart.addEventListener("click", () => {
-        if (heart.innerHTML === "❤️") {
+
+        const productCard = heart.closest(".product-card");
+        const productName = productCard.querySelector("h3").textContent;
+
+        if (wishlist.includes(productName)) {
+
+            wishlist = wishlist.filter(item => item !== productName);
             heart.innerHTML = "🤍";
+
         } else {
+
+            wishlist.push(productName);
             heart.innerHTML = "❤️";
+
         }
+
+        wishlistCount.textContent = wishlist.length;
+
+        localStorage.setItem("wishlist", JSON.stringify(wishlist));
+
     });
+
 });
 
 addcartButtons.forEach(button => {
@@ -168,13 +206,10 @@ categoryButtons.forEach(button => {
     button.addEventListener("click", (e) => {
 
         e.preventDefault();
-
-        // Sab buttons se active hatao
         categoryButtons.forEach(btn => {
             btn.classList.remove("active");
         });
 
-        // Jis button par click hua usko active banao
         button.classList.add("active");
 
         const category = button.getAttribute("data-category");
@@ -197,4 +232,9 @@ categoryButtons.forEach(button => {
 
     });
 
+});
+const wishlistIcon = document.querySelector(".wishlist-icon");
+
+wishlistIcon.addEventListener("click", () => {
+    window.location.href = "wishlist.html";
 });
