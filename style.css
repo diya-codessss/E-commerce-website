@@ -30,14 +30,12 @@ body{
     opacity:.25;
 }
 
-/* Main Content */
 
 .content{
     position:relative;
     z-index:1;
 }
 
-/* Navbar */
 
 .nav-bar{
     display:flex;
@@ -68,7 +66,6 @@ body{
     border-radius:8px;
 }
 
-/* Search */
 
 .search-box{
     display:flex;
@@ -98,7 +95,7 @@ body{
     border-color:#7c3aed;
     box-shadow:0 0 15px rgba(124,58,237,.45);
 }
-/* Search Button */
+
 
 .search-box button{
     padding:12px 22px;
@@ -121,7 +118,7 @@ body{
     transform:scale(.96);
 }
 
-/* Product Card */
+
 
 .product-card{
     position:relative;
@@ -142,7 +139,6 @@ body{
     border-radius: 20px;
 }
 
-/* Wishlist */
 
 .wishlist{
     position:absolute;
@@ -165,7 +161,7 @@ body{
     transform:scale(1.12);
 }
 
-/* Hero */
+
 
 .hero{
     display:flex;
@@ -340,7 +336,7 @@ body{
     color:white;
 }
 
-/* Newsletter */
+
 
 .newsletter{
     text-align:center;
@@ -403,7 +399,7 @@ body{
     box-shadow:0 0 15px rgba(124,58,237,.5);
 }
 
-/* Footer */
+
 
 .footer{
     display:flex;
@@ -459,7 +455,7 @@ body{
     color:#cbd5e1;
 }
 
-/* Footer Bottom */
+
 
 .footer-bottom{
     background:#020617;
@@ -469,7 +465,6 @@ body{
     border-top:1px solid rgba(255,255,255,.08);
 }
 
-/* Cart */
 
 .cart{
     position:fixed;
@@ -501,7 +496,7 @@ body{
     color:#facc15;
 }
 
-/* Cart List */
+
 
 .cart-items{
     position:fixed;
@@ -533,7 +528,7 @@ body{
     border-bottom:1px solid #eee;
 }
 
-/* Active Navbar */
+
 
 .active{
     background:#7c3aed;
@@ -542,7 +537,7 @@ body{
     border-radius:8px;
 }
 
-/* Wishlist */
+
 
 .wishlist-header{
     display:flex;
@@ -588,7 +583,6 @@ body{
     box-shadow:0 10px 25px rgba(0,0,0,.15);
 }
 
-/* Wishlist Icon */
 
 .wishlist-icon{
     position:fixed;
@@ -610,7 +604,6 @@ body{
     box-shadow:0 0 18px rgba(124,58,237,.45);
 }
 
-/* Heart */
 
 .wishlist{
     transition:.3s;
