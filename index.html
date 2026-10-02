@@ -1,798 +1,229 @@
-    <!DOCTYPE html>
-    <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>shopzone</title>
-        <link rel="stylesheet" href="style.css">
-        <script src="script.js" defer></script>
-    </head>
-    <body>
-        <div class = "cart">
-            <span id = "cart-count">0</span>
-        </div>
-        <div class="wishlist-icon">
-    🤍 <span id="wishlist-count">0</span>
-</div>
-        </div>
-        <div class="total-price-box">
-            Total: $<span id="total-price">0.00</span>
-        </div>
-        <div class="cart-items">
-    <h3>Cart Items</h3>
-    <ul id="cart-list"></ul>
-</div>
-        <div class="dot-grid">
-            <div class="dot-grid__wrap">
-                <canvas class="dot-grid__canvas"></canvas>
-            </div>
-        </div>
-
-        <div class = "nav-bar">
-        <a href="#" data-category="all">All</a>
-        <a href="#" data-category="electronics">Electronics</a>
-        <a href="#" data-category="fashion">Fashion</a>
-        <a href="#" data-category="shoes">Shoes</a>
-        <a href="#" data-category="watches">watches</a>
-        </div> 
-        
-        <div class="search-box">
-            <input type="text" placeholder="search products...">
-            <button>Search</button>
-        </div>
-        <section class="hero">
-
-        <div class="hero-text">
-
-            <h1>Discover the Best Collection</h1>
-
-            <p>
-                Shop premium fashion, electronics and accessories
-                at unbeatable prices.
-            </p>
-
-            <button class="shop-btn">Shop Now</button>
-
-        </div>
-
-        <div class="hero-image">
-
-             <img src="https://img.freepik.com/free-vector/online-shopping-concept-illustration_114360-1084.jpg" alt="Online Shopping" alt="Online Shopping">
-
-        </div>
-
-    </section>
-    <section class="offer-banner">
-            <h2>Flat 50% OFF on Summer Collection</h2>
-            <p>Limited Time Offer. Grab Your Favorite Products Now!</p>
-        </section>
-
-        <section class="categories">
-
-            <h2>Shop By Category</h2>
-
-            <div class="category-container">
-
-                <div class="category-card">
-                    <h3> Fashion</h3>
-                </div>
-
-                <div class="category-card">
-                    <h3> Electronics</h3>
-                </div>
-
-                <div class="category-card">
-                    <h3>Shoes</h3>
-                </div>
-
-                <div class="category-card">
-                    <h3>Watches</h3>
-                </div>
-
-            </div>
-
-        </section>
-        <section class="featured-products">
-
-            <h2>Featured Products</h2>
-
-            <div class="product-container">
-
-                <div class="product-card" data-category="electronics">
-                    <span class="wishlist">🤍</span>
-                    <img src="https://images.unsplash.com/photo-1496181133206-80ce9b88a853?w=500" alt="Laptop">
-                    <h3>HP Laptop</h3>
-                    <p>$899.99</p>
-                    <p>⭐⭐⭐⭐☆ (4.5)</p>
-                    <p> 20%OFF </p>
-
-                    <button class="add-btn" >Add to Cart</button>
-                    <button class=" buy-now">Buy Now</button>
-    <button class="remove-btn">Remove</button>            </div>
-
-            <div class="product-card" data-category="shoes">
-                <span class="wishlist">🤍</span>
-                <img src="https://images.unsplash.com/photo-1542291026-7eec264c27ff?w=500" alt="Nike Shoes">
-                <h3>Nike Running Shoes</h3>
-                <p>$129.99</p>
-                <p>⭐⭐⭐⭐☆ (4.5)</p>
-                <p> 15%OFF </p>
-                 <button class="add-btn">Add to Cart</button>
-                <button class="buy-now">Buy Now</button>
-                <button class="remove-btn">Remove</button>            
-            </div>
-
-            <div class="product-card" data-category="electronics">
-                <span class="wishlist">🤍</span>
-                <img src="https://images.unsplash.com/photo-1505740420928-5e560c06d30e?w=500" alt="Sony Headphones">
-                <h3>Sony Headphones</h3>
-                <p>$79.99</p>
-                 <p>⭐⭐⭐⭐☆ (4.5)</p>
-                 <p> 10%OFF </p>
-                <button class="add-btn">Add to Cart</button>
-                <button class="buy-now">Buy Now</button>
-                    <button class="remove-btn">Remove</button>
-</div>
-            <div class="product-card" data-category="watches">
-            <span class="wishlist">🤍</span>
-                <img src="https://images.unsplash.com/photo-1523275335684-37898b6baf30?w=500" alt="Smart Watch">
-                <h3>Smart Watch</h3>
-                <p>$199.99</p>
-                 <p>⭐⭐⭐⭐☆ (4.5)</p>
-                    <p> 25%OFF </p>
-<button class="add-btn">Add to Cart</button>
-    <button class="buy-now">Buy Now</button>
-   <button class="remove-btn">Remove</button>            </div>
-            <div class="product-card" data-category="fashion">
-                <span class="wishlist">🤍</span>
-                <img src="https://images.unsplash.com/photo-1553062407-98eeb64c6a62?w=500" alt="Backpack">
-                <h3>Travel Backpack</h3>
-                <p>$59.99</p>
-                 <p>⭐⭐⭐⭐☆ (4.5)</p>
-                    <p> 30%OFF </p>
-                      <button class="add-btn">Add to Cart</button>
-                <button class="buy-now">Buy Now</button>
-               <button class="remove-btn">Remove</button> 
-            </div>
-
-            <div class="product-card" data-category="fashion">
-                <span class="wishlist">🤍</span>
-                <img src="https://images.unsplash.com/photo-1511499767150-a48a237f0083?w=500" alt="Sunglasses">
-                <h3>Ray-Ban Sunglasses</h3>
-                <p>$159.99</p>
-                 <p>⭐⭐⭐⭐☆ (4.5)</p>
-                    <p> 20%OFF </p>
-                      <button class="add-btn">Add to Cart</button>
-                <button class="buy-now">Buy Now</button>
-               <button class="remove-btn">Remove</button>
-            </div>
-            <div class="product-card" data-category="electronics">
-                <span class="wishlist">🤍</span>
-                <img src="https://images.unsplash.com/photo-1516035069371-29a1b244cc32?w=500" alt="Camera">
-                <h3>Canon DSLR Camera</h3>
-                <p>$599.99</p>
-                 <p>⭐⭐⭐⭐☆ (4.5)</p>
-                    <p> 15%OFF </p>
-                      <button class="add-btn">Add to Cart</button>
-                <button class="buy-now">Buy Now</button>
-                <button class="remove-btn">Remove from Cart</button>
-                    </div>
-                    <div class="product-card" data-category="electronics">
-                <span class="wishlist">🤍</span>
-                <img src="https://images.unsplash.com/photo-1511707171634-5f897ff02aa9?w=500" alt="Smartphone"> 
-                <h3>Samsung Galaxy S21</h3>
-                <p>$999.99</p>
-                 <p>⭐⭐⭐⭐☆ (4.5)</p>
-                    <p> 10%OFF </p>
-                      <button class="add-btn">Add to Cart</button>
-                <button class="buy-now">Buy Now</button>
-               <button class="remove-btn">Remove</button>                    </div>
-                    <div class="product-card">
-                <span class="wishlist">🤍</span>
-                <img src="https://images.unsplash.com/photo-1521572163474-6864f9cf17ab"
-                alt="Oversized T-Shirt">
-                <h3>Oversized T-Shirt</h3>
-                <p>$29.99</p>
-                    <p>⭐⭐⭐⭐☆ (4.5)</p>
-                    <p> 20%OFF </p>
-                      <button class="add-btn">Add to Cart</button>
-                <button class="buy-now">Buy Now</button>
-                <button class="remove-btn">Remove from Cart</button>
-                    </div>
-                    <div class="product-card" data-category="fashion">
-                <span class="wishlist">🤍</span>
-                <img src="https://images.unsplash.com/photo-1542272604-787c3835535d"alt="Blue Denim Jeans">
-                <h3>Blue Denim Jeans</h3>
-                <p>$49.99</p>
-                    <p>⭐⭐⭐⭐☆ (4.5)</p>
-                    <p> 15%OFF </p>
-                      <button class="add-btn">Add to Cart</button>
-                <button class="buy-now">Buy Now</button>
-               <button class="remove-btn">Remove</button>                    </div>
-                        <div class="product-card" data-category="fashion">
-                <span class="wishlist">🤍</span>
-                <img src="https://images.unsplash.com/photo-1556821840-3a63f95609a7"alt="Black Hoodie">
-                <h3>Black Hoodie</h3>
-                <p>$39.99</p>
-                    <p>⭐⭐⭐⭐☆ (4.5)</p>
-                    <p> 20%OFF </p>
-                      <button class="add-btn">Add to Cart</button>
-                <button class="buy-now">Buy Now</button>
-               <button class="remove-btn">Remove</button>                    </div>
-
-    <div class="product-card" data-category="electronics">
-    <span class="wishlist">🤍</span>
-    <img src="https://images.unsplash.com/photo-1496181133206-80ce9b88a853?w=500" alt="MacBook Air M4">
-    <h3>MacBook Air M4</h3>
-    <p>$1299.99</p>
-    <p>⭐⭐⭐⭐⭐ (4.9)</p>
-    <p>20% OFF</p>
-    <button class="add-btn">Add to Cart</button>
-    <button class="buy-now">Buy Now</button>
-   <button class="remove-btn">Remove</button></div>
-
-<div class="product-card" data-category="electronics">
-    <span class="wishlist">🤍</span>
-    <img src="https://images.unsplash.com/photo-1496181133206-80ce9b88a853?auto=format&fit=crop&w=500&q=80" alt="Dell XPS 15">
-    <h3>Dell XPS 15</h3>
-    <p>$1499.99</p>
-    <p>⭐⭐⭐⭐⭐ (4.8)</p>
-    <p>15% OFF</p>
-    <button class="add-btn">Add to Cart</button>
-    <button class="buy-now">Buy Now</button>
-   <button class="remove-btn">Remove</button></div>
-
-<div class="product-card" data-category="electronics">
-    <span class="wishlist">🤍</span>
-    <img src="https://images.unsplash.com/photo-1541807084-5c52b6b3adef?w=500" alt="HP Pavilion Laptop">
-    <h3>HP Pavilion Laptop</h3>
-    <p>$899.99</p>
-    <p>⭐⭐⭐⭐☆ (4.6)</p>
-    <p>18% OFF</p>
-    <button class="add-btn">Add to Cart</button>
-    <button class="buy-now">Buy Now</button>
-   <button class="remove-btn">Remove</button></div>
-
-<div class="product-card" data-category="electronics">
-    <span class="wishlist">🤍</span>
-    <img src="https://images.unsplash.com/photo-1593642632823-8f785ba67e45?w=500" alt="ASUS ROG Laptop">
-    <h3>ASUS ROG Laptop</h3>
-    <p>$1899.99</p>
-    <p>⭐⭐⭐⭐⭐ (4.9)</p>
-    <p>10% OFF</p>
-    <button class="add-btn">Add to Cart</button>
-    <button class="buy-now">Buy Now</button>
-   <button class="remove-btn">Remove</button></div>
-
-<div class="product-card" data-category="electronics">
-    <span class="wishlist">🤍</span>
-    <img src="https://images.unsplash.com/photo-1511707171634-5f897ff02aa9?w=500" alt="iPhone 16 Pro">
-    <h3>iPhone 16 Pro</h3>
-    <p>$1199.99</p>
-    <p>⭐⭐⭐⭐⭐ (4.9)</p>
-    <p>12% OFF</p>
-    <button class="add-btn">Add to Cart</button>
-    <button class="buy-now">Buy Now</button>
-   <button class="remove-btn">Remove</button></div>
-
-<div class="product-card" data-category="electronics">
-    <span class="wishlist">🤍</span>
-    <img src="https://images.unsplash.com/photo-1610945265064-0e34e5519bbf?w=500" alt="Samsung Galaxy S25 Ultra">
-    <h3>Samsung Galaxy S25 Ultra</h3>
-    <p>$1299.99</p>
-    <p>⭐⭐⭐⭐⭐ (4.8)</p>
-    <p>14% OFF</p>
-    <button class="add-btn">Add to Cart</button>
-    <button class="buy-now">Buy Now</button>
-   <button class="remove-btn">Remove</button></div>
-
-<div class="product-card"  data-category="electronics">
-    <span class="wishlist">🤍</span>
-    <img src="https://images.unsplash.com/photo-1505740420928-5e560c06d30e?w=500" alt="Sony Headphones">
-    <h3>Sony Headphones</h3>
-    <p>$399.99</p>
-    <p>⭐⭐⭐⭐⭐ (4.9)</p>
-    <p>22% OFF</p>
-    <button class="add-btn">Add to Cart</button>
-    <button class="buy-now">Buy Now</button>
-   <button class="remove-btn">Remove</button></div>
-
-<div class="product-card" data-category="electronics">
-    <span class="wishlist">🤍</span>
-    <img src="https://images.unsplash.com/photo-1544244015-0df4b3ffc6b0?w=500" alt="Apple iPad Air">
-    <h3>Apple iPad Air</h3>
-    <p>$699.99</p>
-    <p>⭐⭐⭐⭐☆ (4.7)</p>
-    <p>17% OFF</p>
-    <button class="add-btn">Add to Cart</button>
-    <button class="buy-now">Buy Now</button>
-   <button class="remove-btn">Remove</button></div>
-
-    <div class="product-card" data-category="fashion">
-    <span class="wishlist">🤍</span>
-    <img src="https://images.unsplash.com/photo-1521572267360-ee0c2909d518?w=500" alt="Nike Sports T-Shirt">
-    <h3>Nike Sports T-Shirt</h3>
-    <p>$39.99</p>
-    <p>⭐⭐⭐⭐⭐ (4.8)</p>
-    <p>25% OFF</p>
-    <button class="add-btn">Add to Cart</button>
-    <button class="buy-now">Buy Now</button>
-   <button class="remove-btn">Remove</button></div>
-
-<div class="product-card" data-category="fashion">
-    <span class="wishlist">🤍</span>
-    <img src="https://images.unsplash.com/photo-1515886657613-9f3515b0c78f?w=500" alt="Levi's Denim Jacket">
-    <h3>Levi's Denim Jacket</h3>
-    <p>$89.99</p>
-    <p>⭐⭐⭐⭐☆ (4.7)</p>
-    <p>18% OFF</p>
-    <button class="add-btn">Add to Cart</button>
-    <button class="buy-now">Buy Now</button>
-   <button class="remove-btn">Remove</button></div>
-
-<div class="product-card"   data-category="fashion">
-    <span class="wishlist">🤍</span>
-    <img src="https://images.unsplash.com/photo-1556821840-3a63f95609a7?w=500" alt="Black Hoodie">
-    <h3>Black Hoodie</h3>
-    <p>$49.99</p>
-    <p>⭐⭐⭐⭐⭐ (4.9)</p>
-    <p>20% OFF</p>
-    <button class="add-btn">Add to Cart</button>
-    <button class="buy-now">Buy Now</button>
-   <button class="remove-btn">Remove</button></div>
-
-<div class="product-card" data-category="fashion">
-    <span class="wishlist">🤍</span>
-    <img src="https://images.unsplash.com/photo-1496747611176-843222e1e57c?w=500" alt="Women's Casual Dress">
-    <h3>Women's Casual Dress</h3>
-    <p>$59.99</p>
-    <p>⭐⭐⭐⭐☆ (4.6)</p>
-    <p>15% OFF</p>
-    <button class="add-btn">Add to Cart</button>
-    <button class="buy-now">Buy Now</button>
-   <button class="remove-btn">Remove</button></div>
-
-<div class="product-card" data-category="fashion">
-    <span class="wishlist">🤍</span>
-    <img src="https://images.unsplash.com/photo-1523398002811-999ca8dec234?w=500" alt="Adidas Hoodie">
-    <h3>Adidas Hoodie</h3>
-    <p>$69.99</p>
-    <p>⭐⭐⭐⭐⭐ (4.8)</p>
-    <p>22% OFF</p>
-    <button class="add-btn">Add to Cart</button>
-    <button class="buy-now">Buy Now</button>
-   <button class="remove-btn">Remove</button></div>
-
-<div class="product-card" data-category="fashion">
-    <span class="wishlist">🤍</span>
-    <img src="https://images.unsplash.com/photo-1529139574466-a303027c1d8b?w=500" alt="Puma Polo Shirt">
-    <h3>Puma Polo Shirt</h3>
-    <p>$44.99</p>
-    <p>⭐⭐⭐⭐☆ (4.5)</p>
-    <p>16% OFF</p>
-    <button class="add-btn">Add to Cart</button>
-    <button class="buy-now">Buy Now</button>
-   <button class="remove-btn">Remove</button></div>
-
-<div class="product-card" data-category="fashion">
-    <span class="wishlist">🤍</span>
-    <img src="https://images.unsplash.com/photo-1512436991641-6745cdb1723f?w=500" alt="Zara Oversized T-Shirt">
-    <h3>Zara Oversized T-Shirt</h3>
-    <p>$34.99</p>
-    <p>⭐⭐⭐⭐⭐ (4.8)</p>
-    <p>30% OFF</p>
-    <button class="add-btn">Add to Cart</button>
-    <button class="buy-now">Buy Now</button>
-   <button class="remove-btn">Remove</button></div>
-   
-
-<div class="product-card" data-category="fashion">
-    <span class="wishlist">🤍</span>
-    <img src="https://images.unsplash.com/photo-1483985988355-763728e1935b?w=500" alt="H&M Casual Hoodie">
-    <h3>H&M Casual Hoodie</h3>
-    <p>$54.99</p>
-    <p>⭐⭐⭐⭐☆ (4.7)</p>
-    <p>18% OFF</p>
-    <button class="add-btn">Add to Cart</button>
-    <button class="buy-now">Buy Now</button>
-   <button class="remove-btn">Remove</button></div>
-
-<div class="product-card" data-category="fashion">
-    <span class="wishlist">🤍</span>
-    <img src="https://images.unsplash.com/photo-1541099649105-f69ad21f3246?w=500" alt="Calvin Klein Jeans">
-    <h3>Calvin Klein Jeans</h3>
-    <p>$99.99</p>
-    <p>⭐⭐⭐⭐⭐ (4.9)</p>
-    <p>12% OFF</p>
-    <button class="add-btn">Add to Cart</button>
-    <button class="buy-now">Buy Now</button>
-   <button class="remove-btn">Remove</button></div>
-
-<div class="product-card" data-category="fashion">
-    <span class="wishlist">🤍</span>
-    <img src="https://images.unsplash.com/photo-1529139574466-a303027c1d8b?w=500" alt="Tommy Hilfiger Shirt">
-    <h3>Tommy Hilfiger Shirt</h3>
-    <p>$79.99</p>
-    <p>⭐⭐⭐⭐⭐ (4.8)</p>
-    <p>20% OFF</p>
-    <button class="add-btn">Add to Cart</button>
-    <button class="buy-now">Buy Now</button>
-   <button class="remove-btn">Remove</button></div>
-    <div class="product-card" data-category="shoes">
-    <span class="wishlist">🤍</span>
-    <img src="https://images.unsplash.com/photo-1542291026-7eec264c27ff?w=500" alt="Nike Air Max 270">
-    <h3>Nike Air Max 270</h3>
-    <p>$189.99</p>
-    <p>⭐⭐⭐⭐⭐ (4.9)</p>
-    <p>20% OFF</p>
-    <button class="add-btn">Add to Cart</button>
-    <button class="buy-now">Buy Now</button>
-   <button class="remove-btn">Remove</button></div>
-
-<div class="product-card" data-category="shoes">
-    <span class="wishlist">🤍</span>
-    <img src="https://images.unsplash.com/photo-1600185365483-26d7a4cc7519?w=500" alt="Adidas Ultraboost">
-    <h3>Adidas Ultraboost</h3>
-    <p>$179.99</p>
-    <p>⭐⭐⭐⭐⭐ (4.8)</p>
-    <p>18% OFF</p>
-    <button class="add-btn">Add to Cart</button>
-    <button class="buy-now">Buy Now</button>
-   <button class="remove-btn">Remove</button></div>
-
-<div class="product-card" data-category="shoes">
-    <span class="wishlist">🤍</span>
-    <img src="https://images.unsplash.com/photo-1608231387042-66d1773070a5?w=500" alt="Puma RS-X">
-    <h3>Puma RS-X</h3>
-    <p>$149.99</p>
-    <p>⭐⭐⭐⭐☆ (4.7)</p>
-    <p>15% OFF</p>
-    <button class="add-btn">Add to Cart</button>
-    <button class="buy-now">Buy Now</button>
-   <button class="remove-btn">Remove</button></div>
-
-<div class="product-card" data-category="shoes">
-    <span class="wishlist">🤍</span>
-    <img src="https://images.unsplash.com/photo-1543508282-6319a3e2621f?w=500" alt="Converse Chuck Taylor">
-    <h3>Converse Chuck Taylor</h3>
-    <p>$74.99</p>
-    <p>⭐⭐⭐⭐⭐ (4.8)</p>
-    <p>25% OFF</p>
-    <button class="add-btn">Add to Cart</button>
-    <button class="buy-now">Buy Now</button>
-   <button class="remove-btn">Remove</button></div>
-
-<div class="product-card" data-category="shoes">
-    <span class="wishlist">🤍</span>
-    <img src="https://images.unsplash.com/photo-1525966222134-fcfa99b8ae77?w=500" alt="Vans Old Skool">
-    <h3>Vans Old Skool</h3>
-    <p>$79.99</p>
-    <p>⭐⭐⭐⭐☆ (4.6)</p>
-    <p>22% OFF</p>
-    <button class="add-btn">Add to Cart</button>
-    <button class="buy-now">Buy Now</button>
-   <button class="remove-btn">Remove</button></div>
-
-<div class="product-card" data-category="shoes">
-    <span class="wishlist">🤍</span>
-    <img src="https://images.unsplash.com/photo-1595950653106-6c9ebd614d3a?w=500" alt="Jordan 1 Retro High">
-    <h3>Jordan 1 Retro High</h3>
-    <p>$199.99</p>
-    <p>⭐⭐⭐⭐⭐ (4.9)</p>
-    <p>12% OFF</p>
-    <button class="add-btn">Add to Cart</button>
-    <button class="buy-now">Buy Now</button>
-   <button class="remove-btn">Remove</button></div>
-
-<div class="product-card" data-category="shoes">
-    <span class="wishlist">🤍</span>
-    <img src="https://images.unsplash.com/photo-1595341888016-a392ef81b7de?w=500" alt="New Balance 9060">
-    <h3>New Balance 9060</h3>
-    <p>$169.99</p>
-    <p>⭐⭐⭐⭐⭐ (4.8)</p>
-    <p>16% OFF</p>
-    <button class="add-btn">Add to Cart</button>
-    <button class="buy-now">Buy Now</button>
-   <button class="remove-btn">Remove</button></div>
-
-<div class="product-card" data-category="shoes">
-    <span class="wishlist">🤍</span>
-    <img src="https://images.unsplash.com/photo-1515955656352-a1fa3ffcd111?w=500" alt="Reebok Classic">
-    <h3>Reebok Classic</h3>
-    <p>$99.99</p>
-    <p>⭐⭐⭐⭐☆ (4.5)</p>
-    <p>20% OFF</p>
-    <button class="add-btn">Add to Cart</button>
-    <button class="buy-now">Buy Now</button>
-   <button class="remove-btn">Remove</button></div>
-
-<div class="product-card" data-category="shoes">
-    <span class="wishlist">🤍</span>
-    <img src="https://images.unsplash.com/photo-1556906781-9a412961c28c?w=500" alt="ASICS Gel Kayano">
-    <h3>ASICS Gel Kayano</h3>
-    <p>$159.99</p>
-    <p>⭐⭐⭐⭐⭐ (4.8)</p>
-    <p>18% OFF</p>
-    <button class="add-btn">Add to Cart</button>
-    <button class="buy-now">Buy Now</button>
-   <button class="remove-btn">Remove</button></div>
-
-<div class="product-card" data-category="shoes">
-    <span class="wishlist">🤍</span>
-    <img src="https://images.unsplash.com/photo-1460353581641-37baddab0fa2?w=500" alt="Skechers Go Walk">
-    <h3>Skechers Go Walk</h3>
-    <p>$89.99</p>
-    <p>⭐⭐⭐⭐☆ (4.6)</p>
-    <p>24% OFF</p>
-    <button class="add-btn">Add to Cart</button>
-    <button class="buy-now">Buy Now</button>
-   <button class="remove-btn">Remove</button></div>
-
-    <div class="product-card" data-category="watches">
-    <span class="wishlist">🤍</span>
-    <img src="https://images.unsplash.com/photo-1617043786394-f977fa12eddf?auto=format&fit=crop&w=500&q=80" alt="Apple Watch Ultra 2">
-    <h3>Apple Watch Ultra 2</h3>
-    <p>$599.99</p>
-    <p>⭐⭐⭐⭐⭐ (4.9)</p>
-    <p>15% OFF</p>
-    <button class="add-btn">Add to Cart</button>
-    <button class="buy-now">Buy Now</button>
-   <button class="remove-btn">Remove</button></div>
-
-   <div class="product-card" data-category="watches">
-    <span class="wishlist">🤍</span>
-    <img src="https://images.unsplash.com/photo-1523170335258-f5ed11844a49?auto=format&fit=crop&w=500&q=80" alt="Apple Watch SE">
-    <h3>Apple Watch SE</h3>
-    <p>$299.99</p>
-    <p>⭐⭐⭐⭐⭐ (4.9)</p>
-    <p>15% OFF</p>
-    <button class="add-btn">Add to Cart</button>
-    <button class="buy-now">Buy Now</button>
-   <button class="remove-btn">Remove</button></div>
-
-   <div class="product-card" data-category="watches">
-    <span class="wishlist">🤍</span>
-    <img src="https://images.unsplash.com/photo-1547996160-81dfa63595aa?auto=format&fit=crop&w=500&q=80" alt="Fossil Men's Chronograph Watch">
-    <h3>Fossil Men's Chronograph Watch</h3>
-    <p>$189.99</p>
-    <p>⭐⭐⭐⭐⭐ (4.9)</p>
-    <p>15% OFF</p>
-    <button class="add-btn">Add to Cart</button>
-    <button class="buy-now">Buy Now</button>
-   <button class="remove-btn">Remove</button></div>
-
-   <div class="product-card" data-category="watches">
-    <span class="wishlist">🤍</span>
-    <img src="https://images.unsplash.com/photo-1508057198894-247b23fe5ade?auto=format&fit=crop&w=500&q=80" alt="Samsung Galaxy Watch 6">
-    <h3>Samsung Galaxy Watch 6</h3>
-    <p>$279.99</p>
-    <p>⭐⭐⭐⭐⭐ (4.9)</p>
-    <p>15% OFF</p>
-    <button class="add-btn">Add to Cart</button>
-    <button class="buy-now">Buy Now</button>
-   <button class="remove-btn">Remove</button></div>
-
-   <div class="product-card" data-category="watches">
-    <span class="wishlist">🤍</span>
-    <img src="https://images.unsplash.com/photo-1523275335684-37898b6baf30?auto=format&fit=crop&w=500&q=80" alt="Garmin Venu 3">
-    <h3>Garmin Venu 3</h3>
-    <p>$399.99</p>
-    <p>⭐⭐⭐⭐⭐ (4.9)</p>
-    <p>15% OFF</p>
-    <button class="add-btn">Add to Cart</button>
-    <button class="buy-now">Buy Now</button>
-   <button class="remove-btn">Remove</button></div>
-
-   <div class="product-card" data-category="watches">
-    <span class="wishlist">🤍</span>
-    <img src="https://images.unsplash.com/photo-1434056886845-dac89ffe9b56?auto=format&fit=crop&w=500&q=80" alt="Amazfit GTR 4">
-    <h3>Amazfit GTR 4</h3>
-    <p>$279.99</p>
-    <p>⭐⭐⭐⭐⭐ (4.9)</p>
-    <p>15% OFF</p>
-    <button class="add-btn">Add to Cart</button>
-    <button class="buy-now">Buy Now</button>
-   <button class="remove-btn">Remove</button></div>
-
-
-<div class="product-card" data-category="watches">
-    <span class="wishlist">🤍</span>
-    <img src="https://images.unsplash.com/photo-1522312346375-d1a52e2b99b3?auto=format&fit=crop&w=500&q=80" alt="Casio G-Shock GA-2100">
-    <h3>Casio G-Shock GA-2100</h3>
-    <p>$149.99</p>
-    <p>⭐⭐⭐⭐⭐ (4.9)</p>
-    <p>15% OFF</p>
-    <button class="add-btn">Add to Cart</button>
-    <button class="buy-now">Buy Now</button>
-   <button class="remove-btn">Remove</button></div>
-
-   <div class="product-card" data-category="watches">
-    <span class="wishlist">🤍</span>
-    <img src="https://images.unsplash.com/photo-1511385348-a52b4a160dc2?auto=format&fit=crop&w=500&q=80" alt="Titan Raga">
-    <h3>Titan Raga</h3>
-    <p>$119.99</p>
-    <p>⭐⭐⭐⭐⭐ (4.9)</p>
-    <p>15% OFF</p>
-    <button class="add-btn">Add to Cart</button>
-    <button class="buy-now">Buy Now</button>
-   <button class="remove-btn">Remove</button></div>
-
-   <div class="product-card" data-category="watches">
-    <span class="wishlist">🤍</span>
-    <img src="https://images.unsplash.com/photo-1434056886845-dac89ffe9b56?auto=format&fit=crop&w=500&q=80" alt="Michael Kors Watch">
-    <h3>Michael Kors Watch</h3>
-    <p>$249.99</p>
-    <p>⭐⭐⭐⭐⭐ (4.9)</p>
-    <p>15% OFF</p>
-    <button class="add-btn">Add to Cart</button>
-    <button class="buy-now">Buy Now</button>
-   <button class="remove-btn">Remove</button></div>
-   
-<div class="product-card" data-category="fashion">
-    <span class="wishlist">🤍</span>
-    <img src="https://images.unsplash.com/photo-1551232864-3f0890e580d9?auto=format&fit=crop&w=500&q=80" alt="Leather Jacket">
-    <h3>Leather Jacket</h3>
-    <p>$129.99</p>
-    <p>⭐⭐⭐⭐⭐ (4.9)</p>
-    <p>25% OFF</p>
-    <button class="add-btn">Add to Cart</button>
-    <button class="buy-now">Buy Now</button>
-   <button class="remove-btn">Remove</button></div>
-
-<div class="product-card" data-category="fashion">
-    <span class="wishlist">🤍</span>
-    <img src="https://images.unsplash.com/photo-1541099649105-f69ad21f3246?auto=format&fit=crop&w=500&q=80" alt="Slim Fit Jeans">
-    <h3>Slim Fit Jeans</h3>
-    <p>$69.99</p>
-    <p>⭐⭐⭐⭐☆ (4.7)</p>
-    <p>18% OFF</p>
-    <button class="add-btn">Add to Cart</button>
-    <button class="buy-now">Buy Now</button>
-   <button class="remove-btn">Remove</button></div>
-
-<div class="product-card" data-category="fashion">
-    <span class="wishlist">🤍</span>
-    <img src="https://images.unsplash.com/photo-1515886657613-9f3515b0c78f?auto=format&fit=crop&w=500&q=80" alt="Denim Shirt">
-    <h3>Denim Shirt</h3>
-    <p>$49.99</p>
-    <p>⭐⭐⭐⭐⭐ (4.8)</p>
-    <p>20% OFF</p>
-    <button class="add-btn">Add to Cart</button>
-    <button class="buy-now">Buy Now</button>
-   <button class="remove-btn">Remove</button></div>
-
-<div class="product-card" data-category="fashion">
-    <span class="wishlist">🤍</span>
-    <img src="https://images.unsplash.com/photo-1483985988355-763728e1935b?auto=format&fit=crop&w=500&q=80" alt="Casual Blazer">
-    <h3>Casual Blazer</h3>
-    <p>$99.99</p>
-    <p>⭐⭐⭐⭐⭐ (4.8)</p>
-    <p>15% OFF</p>
-    <button class="add-btn">Add to Cart</button>
-    <button class="buy-now">Buy Now</button>
-   <button class="remove-btn">Remove</button></div>
-
-<div class="product-card" data-category="fashion">
-    <span class="wishlist">🤍</span>
-    <img src="https://images.unsplash.com/photo-1529139574466-a303027c1d8b?auto=format&fit=crop&w=500&q=80" alt="Linen Shirt">
-    <h3>Linen Shirt</h3>
-    <p>$59.99</p>
-    <p>⭐⭐⭐⭐☆ (4.6)</p>
-    <p>18% OFF</p>
-    <button class="add-btn">Add to Cart</button>
-    <button class="buy-now">Buy Now</button>
-   <button class="remove-btn">Remove</button></div>
-
-<div class="product-card" data-category="fashion">
-    <span class="wishlist">🤍</span>
-    <img src="https://images.unsplash.com/photo-1503342217505-b0a15ec3261c?auto=format&fit=crop&w=500&q=80" alt="Cargo Pants">
-    <h3>Cargo Pants</h3>
-    <p>$54.99</p>
-    <p>⭐⭐⭐⭐⭐ (4.8)</p>
-    <p>20% OFF</p>
-    <button class="add-btn">Add to Cart</button>
-    <button class="buy-now">Buy Now</button>
-   <button class="remove-btn">Remove</button></div>
-
-<div class="product-card" data-category="fashion">
-    <span class="wishlist">🤍</span>
-    <img src="https://images.unsplash.com/photo-1496747611176-843222e1e57c?auto=format&fit=crop&w=500&q=80" alt="Floral Dress">
-    <h3>Floral Dress</h3>
-    <p>$79.99</p>
-    <p>⭐⭐⭐⭐⭐ (4.9)</p>
-    <p>22% OFF</p>
-    <button class="add-btn">Add to Cart</button>
-    <button class="buy-now">Buy Now</button>
-   <button class="remove-btn">Remove</button></div>
-
-<div class="product-card" data-category="fashion">
-    <span class="wishlist">🤍</span>
-    <img src="https://images.unsplash.com/photo-1515372039744-b8f02a3ae446?auto=format&fit=crop&w=500&q=80" alt="Pleated Skirt">
-    <h3>Pleated Skirt</h3>
-    <p>$44.99</p>
-    <p>⭐⭐⭐⭐☆ (4.7)</p>
-    <p>25% OFF</p>
-    <button class="add-btn">Add to Cart</button>
-    <button class="buy-now">Buy Now</button>
-   <button class="remove-btn">Remove</button></div>
-
-
-
-
-
-    </section>
-    </div>
-    <section class="newsletter">
-        <h2>Subscribe to Our Newsletter</h2>
-        <p>Stay updated with the latest products and exclusive offers.</p>
-        <div class="newsletter-box">
-            <input type="email" placeholder="Enter your email">
-            <button>Subscribe</button>
-        </div>  
-    </section>
-    <section>
-
-<footer class="footer">
-
-
-    <div class="footer-section">
-        <h2>ShopZone</h2>
-
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, viewport-fit=cover"
+    />
+    <meta name="theme-color" content="#0f172a" />
+    <meta
+      name="description"
+      content="ShopZone: electronics, fashion, shoes and watches at unbeatable prices."
+    />
+    <title>ShopZone | Electronics, fashion, shoes and watches</title>
+    <link
+      rel="icon"
+      href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Ctext y='26' font-size='26'%3E🛍️%3C/text%3E%3C/svg%3E"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Manrope:wght@500;700;800&display=swap"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <script src="products.js" defer></script>
+    <script src="script.js" defer></script>
+  </head>
+  <body>
+    <a class="skip" href="#products">Skip to products</a>
+    <p class="promo">
+      Flat 50% off on the summer collection. Limited time offer.
+    </p>
+
+    <header class="top">
+      <div class="bar">
+        <a class="logo" href="index.html">Shop<b>Zone</b></a>
+        <form class="search" id="search-form" role="search">
+          <input
+            id="q"
+            type="search"
+            placeholder="Search products"
+            aria-label="Search products"
+            autocomplete="off"
+            enterkeyhint="search"
+          />
+        </form>
+        <a
+          class="icon-btn"
+          href="wishlist.html"
+          data-label="Wishlist"
+          aria-label="Wishlist"
+          ><span aria-hidden="true">🤍</span
+          ><span class="badge" data-wl-count hidden>0</span></a
+        >
+        <button
+          class="icon-btn"
+          id="cart-open"
+          type="button"
+          data-label="Open cart"
+          aria-label="Open cart"
+        >
+          <span aria-hidden="true">🛒</span
+          ><span class="badge" data-cart-count hidden>0</span>
+        </button>
+      </div>
+    </header>
+
+    <main>
+      <section class="hero">
+        <h1>Discover the best collection</h1>
         <p>
-            Your one-stop destination for quality products at affordable prices.
+          Premium fashion, electronics and accessories at unbeatable prices.
         </p>
-    </div>
-    <div class="quick-links">
+        <a class="btn" href="#products">Shop now</a>
+      </section>
 
-        <h2>Quick Links</h2>
+      <section class="shop" id="products" aria-labelledby="shop-title">
+        <div class="tools">
+          <h2 id="shop-title">Featured products</h2>
+          <div
+            class="chips"
+            id="chips"
+            role="group"
+            aria-label="Filter by category"
+          >
+            <button
+              class="chip"
+              type="button"
+              data-cat="all"
+              aria-pressed="true"
+            >
+              All
+            </button>
+            <button
+              class="chip"
+              type="button"
+              data-cat="electronics"
+              aria-pressed="false"
+            >
+              Electronics
+            </button>
+            <button
+              class="chip"
+              type="button"
+              data-cat="fashion"
+              aria-pressed="false"
+            >
+              Fashion
+            </button>
+            <button
+              class="chip"
+              type="button"
+              data-cat="shoes"
+              aria-pressed="false"
+            >
+              Shoes
+            </button>
+            <button
+              class="chip"
+              type="button"
+              data-cat="watches"
+              aria-pressed="false"
+            >
+              Watches
+            </button>
+          </div>
+          <label class="sort"
+            >Sort by
+            <select id="sort">
+              <option value="featured">Featured</option>
+              <option value="price-asc">Price: low to high</option>
+              <option value="price-desc">Price: high to low</option>
+              <option value="rating">Top rated</option>
+              <option value="off">Biggest discount</option>
+            </select>
+          </label>
+        </div>
+        <p id="count" class="muted" role="status"></p>
+        <div class="grid" id="grid"></div>
+        <div class="empty" id="empty" hidden>
+          <p>No products match your search.</p>
+          <button class="btn" id="reset" type="button">
+            Clear search and filters
+          </button>
+        </div>
+        <noscript
+          ><p class="empty">Turn on JavaScript to browse products.</p></noscript
+        >
+      </section>
 
-        <p>Navigate through our website with ease.</p>
+      <section class="news">
+        <h2>Subscribe to our newsletter</h2>
+        <p class="muted">
+          Get new products and exclusive offers in your inbox.
+        </p>
+        <form class="news-form" id="news-form">
+          <input
+            type="email"
+            required
+            placeholder="Enter your email"
+            aria-label="Email address"
+            autocomplete="email"
+          />
+          <button class="btn" type="submit">Subscribe</button>
+        </form>
+      </section>
+    </main>
 
-        <ul>
-            <li><a href="#">Home</a></li>
-            <li><a href="#">Products</a></li>
-            <li><a href="#">Categories</a></li>
-            <li><a href="#">About Us</a></li>
-            <li><a href="#">Contact Us</a></li>
-        </ul>
-
-    </div>
-
-    <div class="contact">
-
-        <h2>Contact Us</h2>
-
-        <p>Get in touch with us for any inquiries or support.</p>
-
-        <ul>
-            <li>📞 +1 (123) 456-7890</li>
-            <li>📧 support@shopzone.com</li>
-            <li>📍 New York, USA</li>
-        </ul>
-
-    </div>
-
-    <div class="follow">
-
-        <h2>Follow Us</h2>
-
-        <p>Stay connected with us on social media.</p>
-
-        <ul>
-            <li><a href="https://github.com/diya-codessss" target="_blank">GitHub</a></li>
-            <li><a href="https://www.linkedin.com/in/diya-khandelwal-b9633b383/" target="_blank">LinkedIn</a></li>
-            <li><a href="https://x.com/Khande98283Diya" target="_blank">X (Twitter)</a></li>
-        </ul>
-
-    </div>
-
-</footer>
-
-
-<div class="footer-bottom">
-
-    <p>© 2026 ShopZone. All Rights Reserved.</p>
-
-</div>
-</body>
+    <footer class="foot">
+      <div class="foot-in">
+        <div>
+          <h2>ShopZone</h2>
+          <p>
+            Your one-stop destination for quality products at affordable prices.
+          </p>
+        </div>
+        <div>
+          <h2>Quick links</h2>
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="#products">Products</a></li>
+            <li><a href="wishlist.html">Wishlist</a></li>
+          </ul>
+        </div>
+        <div>
+          <h2>Contact us</h2>
+          <ul>
+            <li><a href="tel:+11234567890">+1 (123) 456-7890</a></li>
+            <li>
+              <a href="mailto:support@shopzone.com">support@shopzone.com</a>
+            </li>
+            <li>New York, USA</li>
+          </ul>
+        </div>
+        <div>
+          <h2>Follow us</h2>
+          <ul>
+            <li>
+              <a
+                href="https://github.com/diya-codessss"
+                target="_blank"
+                rel="noopener noreferrer"
+                >GitHub</a
+              >
+            </li>
+            <li>
+              <a
+                href="https://www.linkedin.com/in/diya-khandelwal-b9633b383/"
+                target="_blank"
+                rel="noopener noreferrer"
+                >LinkedIn</a
+              >
+            </li>
+            <li>
+              <a
+                href="https://x.com/Khande98283Diya"
+                target="_blank"
+                rel="noopener noreferrer"
+                >X (Twitter)</a
+              >
+            </li>
+          </ul>
+        </div>
+      </div>
+      <p class="copy">© 2026 ShopZone. All rights reserved.</p>
+    </footer>
+  </body>
 </html>

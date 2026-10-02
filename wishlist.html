@@ -1,27 +1,78 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Wishlist</title>
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, viewport-fit=cover"
+    />
+    <meta name="theme-color" content="#0f172a" />
+    <meta name="robots" content="noindex" />
+    <title>My wishlist | ShopZone</title>
+    <link
+      rel="icon"
+      href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Ctext y='26' font-size='26'%3E🛍️%3C/text%3E%3C/svg%3E"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Manrope:wght@500;700;800&display=swap"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <script src="products.js" defer></script>
+    <script src="script.js" defer></script>
+  </head>
+  <body data-page="wishlist">
+    <a class="skip" href="#products">Skip to wishlist</a>
 
-    <link rel="stylesheet" href="style.css">
-</head>
-<body>
-
-    <header class="wishlist-header">
-        <h1>❤️ My Wishlist</h1>
-
-        <a href="index.html" class="back-btn">⬅ Back to Shop</a>
+    <header class="top">
+      <div class="bar">
+        <a class="logo" href="index.html">Shop<b>Zone</b></a>
+        <a
+          class="icon-btn"
+          href="wishlist.html"
+          aria-current="page"
+          data-label="Wishlist"
+          aria-label="Wishlist"
+          ><span aria-hidden="true">❤️</span
+          ><span class="badge" data-wl-count hidden>0</span></a
+        >
+        <button
+          class="icon-btn"
+          id="cart-open"
+          type="button"
+          data-label="Open cart"
+          aria-label="Open cart"
+        >
+          <span aria-hidden="true">🛒</span
+          ><span class="badge" data-cart-count hidden>0</span>
+        </button>
+      </div>
     </header>
 
-    <div class="wishlist-container">
+    <main>
+      <section class="shop" id="products" aria-labelledby="shop-title">
+        <div class="tools"><h1 id="shop-title">My wishlist</h1></div>
+        <p id="count" class="muted" role="status"></p>
+        <div class="grid" id="grid"></div>
+        <div class="empty" id="empty" hidden>
+          <p>
+            Your wishlist is empty. Tap the heart on any product to save it
+            here.
+          </p>
+          <a class="btn" href="index.html#products">Browse products</a>
+        </div>
+        <noscript
+          ><p class="empty">
+            Turn on JavaScript to see your wishlist.
+          </p></noscript
+        >
+      </section>
+    </main>
 
-        <ul id="wishlist-list"></ul>
-
-    </div>
-
-    <script src="wishlist.js"></script>
-
-</body>
+    <footer class="foot">
+      <p class="copy">© 2026 ShopZone. All rights reserved.</p>
+    </footer>
+  </body>
 </html>
